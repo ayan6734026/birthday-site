@@ -23,26 +23,7 @@ const ageInterval = setInterval(() => {
     }
 }, 100);
 
-// Countdown timer
-function updateCountdown() {
-    const now = new Date();
-    const tomorrow = new Date();
-    tomorrow.setDate(now.getDate() + 1);
-    tomorrow.setHours(0, 0, 0, 0);
 
-    const diff = tomorrow - now;
-
-    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-    document.querySelectorAll('.countdown-number')[0].textContent = hours.toString().padStart(2, '0');
-    document.querySelectorAll('.countdown-number')[1].textContent = minutes.toString().padStart(2, '0');
-    document.querySelectorAll('.countdown-number')[2].textContent = seconds.toString().padStart(2, '0');
-}
-
-setInterval(updateCountdown, 1000);
-updateCountdown();
 
 // Confetti effect
 document.getElementById('confetti-btn').addEventListener('click', () => {
@@ -101,5 +82,6 @@ function checkCountdownEnd() {
 
 // Check every second if countdown has ended
 setInterval(checkCountdownEnd, 1000);
+
 
 
