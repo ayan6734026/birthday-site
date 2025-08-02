@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>It's Deb's happiest Birthday</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="overflow-x-hidden">
+    <!-- Hero Section -->
+    <section class="hero-section text-white min-h-[80vh] flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-30"></div>
+        <div class="container mx-auto px-4 py-20 z-10 text-center">
+            <div class="floating inline-block mb-8">
+                <div class="birthday-card bg-white rounded-xl p-8 inline-block">
+                    <h1 class="text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">
+                        HAPPY BIRTHDAY!
+                    </h1>
+                    <div class="text-xl text-gray-700">TO MY BEST FRIEND <B>DEB</B></div>
+                </div>
+            </div>
+            
+            <h2 class="text-4xl font-bold mb-4">You're <span id="age-counter" class="text-yellow-300">0</span> Years Amazing!</h2>
+            <p class="text-xl max-w-2xl mx-auto mb-8">Wishing you the most incredible birthday filled with joy, laughter, and all your favorite things!</p>
+            
+            <div id="countdown" class="flex justify-center gap-4 mb-8">
+                <div class="countdown-item">
+                    <span class="countdown-number text-4xl font-bold">00</span>
+                    <span class="countdown-label text-sm">HOURS</span>
+                </div>
+                <div>:</div>
+                <div class="countdown-item">
+                    <span class="countdown-number text-4xl font-bold">00</span>
+                    <span class="countdown-label text-sm">MINUTES</span>
+                </div>
+                <div>:</div>
+                <div class="countdown-item">
+                    <span class="countdown-number text-4xl font-bold">00</span>
+                    <span class="countdown-label text-sm">SECONDS</span>
+                </div>
+            </div>
+            
+            <button id="confetti-btn" class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105">
+                🎉Tap Here
+            </button>
+        </div>
+        
+        <!-- Confetti container -->
+        <div id="confetti-container" class="absolute inset-0 pointer-events-none"></div>
+    </section>
+
+    <!-- Memories Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Some Memories</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="gallery-item bg-gray-100 rounded-xl overflow-hidden shadow-lg">
+                    <img src="pic1.jpg" alt="Two friends laughing together at a concert with colorful lights in the background" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Pandal Hopping</h3>
+                        <p class="text-gray-600">আমাদের সেই বছর প্রথম ঠাকুর দেখতে বেরিয়েছিলাম!😉</p>
+                    </div>
+                </div>
+                <div class="gallery-item bg-gray-100 rounded-xl overflow-hidden shadow-lg">
+                    <img src="pic2.jpg" alt="Friends hiking on a mountain trail with panoramic views of green valleys" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">1st January 2024</h3>
+                    </div>
+                </div>
+                <div class="gallery-item bg-gray-100 rounded-xl overflow-hidden shadow-lg">
+                    <img src="pic3.jpg" alt="Two friends dressed up at a fancy event smiling for the camera" class="w-full h-100 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">মুখে ভাতের একটি ছবি</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Collage -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">⚠আমাদের Handsome ছেলের কিছু Photos ⚠</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="col-span-2 row-span-2">
+                    <img src="pic4.jpg" alt="Close-up portrait of friend smiling warmly with twinkling eyes" class="w-full h-full object-cover rounded-xl">
+                </div>
+                <div>
+                    <img src="pic5.jpg" alt="Candid shot of friend laughing while holding a coffee cup" class="w-full h-full object-cover rounded-xl">
+                </div>
+                <div>
+                    <img src="pic6.jpg" alt="Action shot of friend playing guitar at a campfire" class="w-full h-full object-cover rounded-xl">
+                </div>
+                <div>
+                    <img src="pic7.jpg" alt="Friend posing with thumbs up at a scenic viewpoint" class="w-full h-full object-cover rounded-xl">
+                </div>
+                <div>
+                    <img src="pic8.jpg" alt="Black and white artistic portrait of friend looking thoughtful" class="w-full h-full object-cover rounded-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-xl mb-4">Birthday wishes for my Best Friend</p>
+            <p class="text-gray-400">➡️Made by Ayan Samanta🤵🏻‍♂️</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
