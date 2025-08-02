@@ -1,5 +1,5 @@
 // Age counter animation
-const ageCounter = document.getElementById('age-counter');
+
 const ageCounter = document.getElementById('age-counter');
 const targetAge = 19;
 let currentAge = 0;
@@ -66,4 +66,5 @@ document.getElementById('confetti-btn').addEventListener('click', () => {
         }, duration * 1000);
     }
 });
+
 
