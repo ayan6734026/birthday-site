@@ -19,7 +19,7 @@ const ageInterval = setInterval(() => {
         // Show 20 after a short delay (optional for smooth effect)
         setTimeout(() => {
             ageCounter.textContent = targetAge + 1;
-        }, 1000); 1000ms delay after final 19
+        }, 1000); //1000ms delay after final 19
     }
 }, 100);
 
@@ -75,6 +75,7 @@ document.getElementById('confetti-btn').addEventListener('click', () => {
         }, duration * 1000);
     }
 });
+
 
 
 
