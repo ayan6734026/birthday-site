@@ -78,5 +78,28 @@ document.getElementById('confetti-btn').addEventListener('click', () => {
 
 
 
+function checkCountdownEnd() {
+    const now = new Date();
+    const tomorrow = new Date();
+    tomorrow.setDate(now.getDate() + 1);
+    tomorrow.setHours(0, 0, 0, 0);
+
+    const diff = tomorrow - now;
+
+    if (diff <= 0) {
+        const music = document.getElementById('bg-music');
+        music.play().catch(() => {
+            // If browser blocks autoplay, wait for any user interaction
+            const enablePlayback = () => {
+                music.play();
+                document.removeEventListener('click', enablePlayback);
+            };
+            document.addEventListener('click', enablePlayback);
+        });
+    }
+}
+
+// Check every second if countdown has ended
+setInterval(checkCountdownEnd, 1000);
 
 
