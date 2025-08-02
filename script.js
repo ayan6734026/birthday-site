@@ -1,16 +1,25 @@
 // Age counter animation
-
 const ageCounter = document.getElementById('age-counter');
 const targetAge = 19;
 let currentAge = 0;
 
 const ageInterval = setInterval(() => {
     currentAge++;
-    ageCounter.textContent = currentAge;
+    
+    // While counting up to 18, show currentAge
+    if (currentAge < targetAge) {
+        ageCounter.textContent = currentAge;
+    } 
+    // When currentAge reaches 19, wait a moment then show 20
+    else if (currentAge === targetAge) {
+        ageCounter.textContent = currentAge;
 
-    if (currentAge === targetAge) {
         clearInterval(ageInterval);
-        ageCounter.textContent = targetAge + 1; // Final display: 20
+
+        // Show 20 after a short delay (optional for smooth effect)
+        setTimeout(() => {
+            ageCounter.textContent = targetAge + 1;
+        }, 600); // 600ms delay after final 19
     }
 }, 100);
 
@@ -66,5 +75,6 @@ document.getElementById('confetti-btn').addEventListener('click', () => {
         }, duration * 1000);
     }
 });
+
 
 
